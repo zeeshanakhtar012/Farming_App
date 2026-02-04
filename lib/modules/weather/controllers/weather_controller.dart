@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:get/get.dart';
 import 'package:geolocator/geolocator.dart';
 import '../../../core/services/firebase_service.dart';
@@ -62,6 +64,7 @@ class WeatherController extends GetxController {
       await fetchWeather();
     } catch (e) {
       errorMessage.value = 'Error getting location: ${e.toString()}';
+      log('ERROR ON GETTING LOCATION $e');
       isLoading.value = false;
     }
   }

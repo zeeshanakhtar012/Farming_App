@@ -60,21 +60,19 @@ class ExpenseTrackerView extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
-                  Obx(
-                    () => TextField(
-                      decoration: InputDecoration(
-                        labelText: 'Estimated Revenue (Rs.)',
-                        prefixIcon: const Icon(Icons.attach_money),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
-                        ),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Estimated Revenue (Rs.)',
+                      prefixIcon: const Icon(Icons.attach_money),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12),
                       ),
-                      keyboardType: TextInputType.number,
-                      onChanged: (value) {
-                        controller.estimatedRevenue.value =
-                            double.tryParse(value) ?? 0.0;
-                      },
                     ),
+                    keyboardType: TextInputType.number,
+                    onChanged: (value) {
+                      controller.estimatedRevenue.value =
+                          double.tryParse(value) ?? 0.0;
+                    },
                   ),
                 ],
               ),
@@ -363,24 +361,20 @@ class _AddExpenseDialog extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            Obx(
-              () => TextField(
-                decoration: InputDecoration(
-                  labelText: 'Amount (Rs.)',
-                  prefixIcon: const Icon(Icons.attach_money),
-                ),
-                keyboardType: TextInputType.number,
-                onChanged: (value) => controller.amountController.value = value,
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Amount (Rs.)',
+                prefixIcon: const Icon(Icons.attach_money),
               ),
+              keyboardType: TextInputType.number,
+              onChanged: (value) => controller.amountController.value = value,
             ),
             const SizedBox(height: 16),
-            Obx(
-              () => TextField(
-                decoration: InputDecoration(labelText: 'Description'),
-                maxLines: 2,
-                onChanged: (value) =>
-                    controller.descriptionController.value = value,
-              ),
+            TextField(
+              decoration: InputDecoration(labelText: 'Description'),
+              maxLines: 2,
+              onChanged: (value) =>
+              controller.descriptionController.value = value,
             ),
             const SizedBox(height: 16),
             Obx(

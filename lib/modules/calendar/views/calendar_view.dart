@@ -330,11 +330,9 @@ class _AddEventDialog extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Obx(
-              () => TextField(
-                decoration: InputDecoration(labelText: 'event_title'.tr),
-                onChanged: (value) => controller.titleController.value = value,
-              ),
+            TextField(
+              decoration: InputDecoration(labelText: 'event_title'.tr),
+              onChanged: (value) => controller.titleController.value = value,
             ),
             const SizedBox(height: 16),
             Obx(
@@ -389,23 +387,19 @@ class _AddEventDialog extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            Obx(
-              () => TextField(
-                decoration: InputDecoration(labelText: 'Crop Name (Optional)'),
-                onChanged: (value) =>
-                    controller.cropNameController.value = value,
-              ),
-            ),
+    TextField(
+    decoration: InputDecoration(labelText: 'Crop Name (Optional)'),
+    onChanged: (value) =>
+    controller.cropNameController.value = value,
+    ),
             const SizedBox(height: 16),
-            Obx(
-              () => TextField(
-                decoration: InputDecoration(
-                  labelText: 'Description (Optional)',
-                ),
-                maxLines: 3,
-                onChanged: (value) =>
-                    controller.descriptionController.value = value,
+            TextField(
+              decoration: InputDecoration(
+                labelText: 'Description (Optional)',
               ),
+              maxLines: 3,
+              onChanged: (value) =>
+              controller.descriptionController.value = value,
             ),
             const SizedBox(height: 16),
             Obx(

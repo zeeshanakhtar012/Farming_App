@@ -10,6 +10,7 @@ import 'app/theme/app_theme.dart';
 import 'core/services/firebase_service.dart';
 import 'core/services/notification_service.dart';
 import 'core/utils/app_translations.dart';
+import 'modules/auth/controllers/auth_controller.dart';
 
 /// Main entry point of the application
 /// Initializes Firebase, GetStorage, and sets up the app
@@ -27,7 +28,7 @@ void main() async {
 
   // Initialize Notification Service
   await NotificationService().init();
-
+  Get.put(AuthController());
   runApp(const MyApp());
 }
 
