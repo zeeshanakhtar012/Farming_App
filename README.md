@@ -279,9 +279,7 @@ This project is developed as a Final Year Project.
 
 ## 👥 Authors
 
-[Your Name]
-[Your University]
-[Academic Year]
+Zeeshan Akhtar
 
 ## 🙏 Acknowledgments
 
