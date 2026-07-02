@@ -9,7 +9,7 @@ plugins {
 }
 
 android {
-    namespace "com.SoftMat.smart_farming_app"
+    namespace "com.softmat.farmingapp"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -24,7 +24,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.SoftMat.smart_farming_app"
+        applicationId "com.softmat.farmingapp"
         minSdk flutter.minSdkVersion
         targetSdk flutter.targetSdkVersion
         versionCode flutter.versionCode

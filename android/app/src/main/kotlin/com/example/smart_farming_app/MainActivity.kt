@@ -1,4 +1,4 @@
-package com.SoftMat.smart_farming_app
+package com.softmat.farmingapp
 
 import io.flutter.embedding.android.FlutterActivity
 
